@@ -116,7 +116,7 @@ Environment:
   
 Please run '_**python test.py**_' to see how the program solves the given test puzzles.
 
-Attention: it may take a pretty long time to solve the Puzzle 10 or 11 of Crypt.
+Attention: it may take a pretty long time to solve the Puzzle 4 or 10 of Crypt.
 
 Run '_**python Futoshiki.py**_', '_**python CrossMath.py**_' or '_**python Sudoku.py**_' to see how this program generates a random solveable puzzle and solves it.
 
