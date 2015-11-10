@@ -35,7 +35,7 @@ The complete code contains 8 file beside the readme file:
     
   3. _**CrossMath.py**_ is the implement for **CrossMath** puzzles.
 
-  This file provides four functions who can randomly generate a solve puzzle in the format of string and according to the given size, who can sparse the string and return a dictionary containing all related binary or multi-nary constraints, who can print a puzzle board into the command window or terminal, and who can solve a puzzle in the given string format via BT() class mentioned above.
+  This file provides four functions who can randomly generate a solve puzzle in the format of string and according to the given size, who can parse the string and return a dictionary containing all related unary, binary or/and multi-nary constraints, who can print a puzzle board into the command window or terminal, and who can solve a puzzle in the given string format via BT() class mentioned above.
 
   Due to the support of PC() class, the solver of this puzzle in the file can solve the CrossMath whose size is more than 3x3.
   
@@ -53,14 +53,14 @@ The complete code contains 8 file beside the readme file:
   
   Originated!
 
-   **The above three files can be run who will randomly generate a corresponding puzzle with random size. You can solve it yourself or just press ‘enter’ key for inspecting two solutions, one of which is obtained during generating the puzzle and one of which is gotten via Backtracking Search.**
+   **The above three files can be run and will randomly generate a corresponding puzzle with random size. You can solve it yourself or just press the ‘enter’ key for inspecting two solutions, one of which is obtained during generating the puzzle and one of which is gotten via Backtracking Search.**
 
     
   6. _**test.py**_ is the **main** program basically.
   
   This file provides some brief introduction to this set of program; and can solve **all** the test puzzles provided in the class GitHub, and a randomly generated Sudoku which is considered as the additional work for my striving for an A.
 
-  This file solves the Crypt and Kenken via manually calling the class BT() due to no implement for these two kinds of puzzle in this set of program. 
+  This file solves the Crypt and Kenken via manually calling the class BT() due to no implement for these two kinds of puzzles in this set of program. 
   
     
    Originated of course.
@@ -74,11 +74,13 @@ The complete code contains 8 file beside the readme file:
    Originated!
 
   8. _**p2test 04.10.24 2015-11-09.log**_ is a testing log who recoded a 250-case test's results the author ran on the night of Nov. 8th.
+  
+    I will do some more tests later, and publish a bigger sample test log.
 
 # Algorithms
-In this program, a class who can support node consistency, arc consistency and party consistency is implement and named as PC. For the sake of compatibility, it supports an implement for arc_reduce or revise function in AC3 for dealing with binary constraints, which also is handleable via the function for multi-nary constraints. So, basically, it handles arc consistency via AC3 if you directly set binary constraints not multi-nary constraints for the variables, and handles multi-nary in the way a little like PC1 not the same. 
+In this program, a class who can support node consistency, arc consistency and party consistency is implemented and named as PC. For the sake of compatibility, it supports an implement for arc_reduce or revise function in AC3 for dealing with binary constraints, which also is handleable via the function for multi-nary constraints. So, basically, it handles arc consistency via AC3 if you directly set binary constraints not multi-nary constraints for the related two variables, and handles multi-nary in the way like PC1 but not the same. 
 
-In this program, 4 kinds of variable binding techniques and 2 kinds of inference employed by backtracking are implemented. They are
+In this program, 4 kinds of variable binding techniques and 2 kinds of inference employed by backtracking search are implemented. They are
  
     Variable Binding Techniques: Random (really random), MRV, Degree Heuristic, and MRV+Degree
     
@@ -97,6 +99,15 @@ And, backtracking search provided via this program supports to use the class PC 
 
   4. The running time for solving a puzzle will be record and used for comparison of these algorithms' overall time complexity.
 
+# Goal:
+   As a part of the project of comparison of algorithms, this set of program is aimed at comparing the difference in performance when backtracking search uses different variable binding or/and inference techniques.
+   
+   1. I hope to compare the difference in performance when backtracking uses 4 different variable biding techniques in the situation where MAC is used as the inference technique and where backtracing uses PC to do some preprocess work. Futoshik puzzles are expected to be employed for this task.
+   
+   2. I hope to compare the difference in performance when backtracking uses 2 different inference techniques in the situation where MRV + Degree is used as the variable binding technique and where backtracing uses PC to do some preprocess work. CrossMath puzzles are expected to be employed for this task.
+   
+   3. I hope to compare the difference in performance when backtracking uses or not uses PC to do the preprocess work in the situation where MRV + Degree is used as the variable binding technique and where MAC is used as the inference technique. Sudoku puzzles are expected to be employed for this task.
+   
 # Usage
 
 Environment:
