@@ -57,7 +57,10 @@ class BT():
       else:
         self._bt_pc.set_domain(var, [self.assignment[var]])
     return self._bt_pc.do_PC()
-      
+  
+  def complete(self):
+    """This function can be rewrite according to situation for some hard situation where the correctness of solutions cannot be determined just via PC."""
+    return self._complete()
     
   def _find_unassigned_variable(self, method):
     """ Return the name of an unassigned variable.
@@ -230,7 +233,7 @@ class BT():
     for c in self._bt_unary_cons:
       self._bt_pc.unary_constraint(c[0], c[1])
     for c in self._bt_binary_cons:
-      self._bt_pc.binary_constraint(c[0], c[1], c[2])    
+      self._bt_pc.binary_constraint(c[0], c[1], c[2])
     for c in self._bt_multinary_cons:
       self._bt_pc.multinary_constraint(c[0], c[1])
     
@@ -252,7 +255,7 @@ class BT():
   def _bt_search(self, v_binding_method, inference_method):
     """ This is the real function for Backtracking Search"""
 
-    if self._complete():
+    if self.complete():
       for var in self.assignment:
         if isinstance(self.assignment[var], list):
           self.assignment[var] = self.assignment[var][0]
