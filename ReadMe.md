@@ -109,4 +109,6 @@ Attention: it may take a pretty long time to solve the Puzzle 10 or 11 of Crypt.
 
 Run '_**python Futoshiki.py**_', '_**python CrossMath.py**_' or '_**python Sudoku.py**_' to see how this program generates a random solveable puzzle and solves it.
 
-Or, you can run '_**python p2test.py -h**_’ to see how the program automatically does tests for this project.
+Or, you can run '_**python algComparison.py -h**_’ to see how the program automatically does tests for this project.
+
+Or, you can run '_**python algComparison.py -t FCS -c 10**_’ to see how the program automatically does a 10-case test for this project.
