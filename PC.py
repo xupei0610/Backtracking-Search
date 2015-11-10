@@ -132,17 +132,17 @@ class PC():
       # Obtain all possible combination of other related variables' value as the second input argument
       values = [self.var_domains[v] for v in con[0]]
       if values == []:
-        self.node_consistency(var_name)
-        break
-      total = reduce(lambda x, y: x*y, map(len, values))
-      ys = []
-      for i in range(total):
-        s = total
-        tmp = []
-        for v in values:
-          s = s / len(v)
-          tmp.append(v[int(i/s) % len(v)])
-        ys.append(dict(zip(con[0], tmp)))
+        ys=[{}]
+      else:
+        total = reduce(lambda x, y: x*y, map(len, values))
+        ys = []
+        for i in range(total):
+          s = total
+          tmp = []
+          for v in values:
+            s = s / len(v)
+            tmp.append(v[int(i/s) % len(v)])
+          ys.append(dict(zip(con[0], tmp)))
       func = con[1]
       removed = 0
       iter_range = range(len(self.var_domains[var_name]))

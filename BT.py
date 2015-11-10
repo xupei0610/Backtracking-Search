@@ -171,9 +171,9 @@ class BT():
           self._bt_pc.set_domain(var, [self.assignment[var]].copy())
       if current_var in self._bt_pc.unary_cons:
         for con in self._bt_pc.unary_cons[current_var]:
-          if isinstance(self.assignment[con[0]], list):
-            self._bt_pc.node_consistency(con[0])
-            result[con[0]] = self._bt_pc.var_domains[con[0]].copy()
+          if isinstance(self.assignment[current_var], list):
+            self._bt_pc.node_consistency(current_var)
+            result[current_var] = self._bt_pc.var_domains[current_var].copy()
             if len(result[con[0]]) == 0:
               return False
       if current_var in self._bt_pc.binary_cons:
