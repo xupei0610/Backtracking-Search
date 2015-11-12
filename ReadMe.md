@@ -75,7 +75,8 @@ The complete code contains 8 file beside the readme file:
 
   8. _**p2test 04.10.24 2015-11-09.log**_ is a testing log who recoded a 250-case test's results the author ran on the night of Nov. 8th.
   
-    I will do some more tests later, and publish a bigger sample test log.
+  9. _**p2test 14.01.04 2015-11-10.log**_ is a testing log who recoded a 1000-case test's results the author ran on Nov. 10th.
+  
 
 # Algorithms
 In this program, a class who can support node consistency, arc consistency and party consistency is implemented and named as PC. For the sake of compatibility, it supports an implement for arc_reduce or revise function in AC3 for dealing with binary constraints, which also is handleable via the function for multi-nary constraints. So, basically, it handles arc consistency via AC3 if you directly set binary constraints not multi-nary constraints for the related two variables, and handles multi-nary in the way like PC1 but not the same. 
