@@ -13,7 +13,7 @@ Pei Xu, 5186611, xuxx0884 at umn.edu
 MIT
 
 # Files
-The complete code contains 8 file beside the readme file:
+The complete code contains 9 file beside the readme file:
 
   1. _**PC.py**_ is the library file of a **modified AC3**.
   
@@ -73,9 +73,11 @@ The complete code contains 8 file beside the readme file:
    
    Originated!
 
-  8. _**p2test 04.10.24 2015-11-09.log**_ is a testing log who recoded a 250-case test's results the author ran on the night of Nov. 8th.
+  8. _**p2test 04.10.24 2015-11-09.log**_ is a testing log who recods a 250-case test's results the author ran on the night of Nov. 8th.
   
-  9. _**p2test 14.01.04 2015-11-10.log**_ is a testing log who recoded a 1000-case test's results the author ran on Nov. 10th.
+  9. _**p2test 14.01.04 2015-11-10.log**_ is a testing log who recods a 1000-case test's results the author ran on Nov. 10th.
+  
+  In this test, 1000 Futoshiki Puzzles are used to test Backtracking using random, MRV, Degree Heuristic and MRV+DH respectively. (So it is 4000 tests for this case.) And, 1000 CrossMath Puzzles are used to test Backtracking using MAC and Forward Checking respectively. (So it is 2000 tests for this case.) And, 1000 Sudoku Puzzles are used to test Backtracking preceded by PC or not. (So it is 2000 tests for this case as well.) The results of total 8000 tests are recorded in this log file. I think it is enough to help compare Backtracking using different variable binding or/and inference techniques or/and preceded by PC (or say AC3 here since no path consistency is used in Sudoku Puzzles) or not.
   
 
 # Algorithms
